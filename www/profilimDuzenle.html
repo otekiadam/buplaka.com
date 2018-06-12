@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<title>buplaka.com </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta charset utf="8">
+<!--font-awsome-css-->
+     <link rel="stylesheet" href="css/font-awesome.min.css"> 
+<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="css/style2.css" rel="stylesheet" type="text/css"/>
+	
+<!--component-css-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+		<script src="css/index.css"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script src="js/admob_simple.js"></script>
+		<script src="js/AdMob.js"></script>
+<!--script-->
+	<script src="js/modernizr.custom.js"></script>
+    <script src="js/bigSlide.js"></script>
+           <script>
+				$(document).ready(function() {
+				$('.menu-link').bigSlide();
+
+				//var id=window.localStorage.getItem("userID");
+
+				//alert(id);
+				});
+	 </script>
+
+	 <style>
+	 body, html{     
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+	 </style>
+	 <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
+	 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+	 <script src="http://hayageek.github.io/jQuery-Upload-File/4.0.11/jquery.uploadfile.min.js"></script>
+	 <style>
+		 .disabled-inputs{
+			opacity: 0.5!important;
+
+		 }
+
+	 .color-inputs{
+    color: #fff!important;
+    background-color: #3378b7!important;
+	 }
+	 </style>
+<!-- web-fonts -->  
+<link href="https://fonts.googleapis.com/css?family=Asap|Quicksand" rel="stylesheet">
+<!-- //web-fonts -->
+<!-- pop-up-box -->
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	    <script>
+			$(document).ready(function() {
+				$('.popup-top-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+				});																							
+			}); 
+		</script>
+<!--//pop-up-box -->
+    </head>
+<body style="background: #fff">
+<div class="body-back" style="background: #fff!important">
+	<div class="masthead pdng-stn1">
+			<div id="menu" class="panel" role="navigation">
+					<div class="wrap-content" style="margin: 0 35px;">
+						<div class="profile-menu">
+							<img  src="images/logo-01.png" alt=" ">
+		
+								<div class="pro-menu" >
+									<div class="logo">
+											<li><a class=" link link--yaku active"  href="anaSayfa.html" > <i class="glyphicon glyphicon-home"></i> Ana Sayfa</a></li>
+											<li><a class=" link link--yaku  " href="gonderiler.html"> <i class="glyphicon glyphicon-road"></i> Gönderiler</a></li>
+											<li><a class=" link link--yaku  " href="gambazlananlar.html" > <i class="glyphicon glyphicon-eye-close"></i> Gambazlananlar</a></li>
+											<li><a class=" link link--yaku  " href="ilaniAsklar.html"> <i class="glyphicon glyphicon-heart"></i> İlanı Aşklar</a></li>
+											<li><a class=" link link--yaku  " href="destek.html" ><i class="glyphicon glyphicon-wrench"></i> Destek</a></li>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+		<div class="phone-box wrap push" id="home">
+			<div class="menu-notify" style="    position: fixed;
+			width: 100%;
+			z-index: 1000;" >
+				<div class="profile-left">
+					<a href="#menu" class="menu-link"><i class="fa fa-list-ul"></i></a>
+				</div>
+				<div class="Profile-mid">
+					<h5 class="pro-link"><img src="images/logo-01.png" style="width:90px;height:26px" alt="">
+					
+					</h5>
+				</div>
+				<div class="Profile-right">
+
+					<a href="cikisYap.html" class="sign-in"> <i class="fa fa-sign-out"></i></a> 
+					
+				</div>
+				<div class="clearfix"></div>
+	</div> 
+
+   <div class="container-fluid" style="padding:0px!important" >
+
+	<div class="detalis-grids">			
+		<div class="details-grid">
+		</div>
+		<div class="details-shade" style="background:#fff!important;padding-left: 10px;padding-right: 10px;min-height: 100px!important;">
+			<div  class="details-img" style="top: -62%!important;">
+				<img id="userPhoto" style="width: 140px;height: 140px;" class="img-circle border-effect1"  alt=" "><br>
+			<!-- <div style="width: 200px" id="fileuploader"><i class="glyphicon glyphicon-camera" id="photoUpload" style="font-size: 35px;"></i></div>	 -->
+			
+			<a onclick="getImage()"><i class="glyphicon glyphicon-camera"  style="font-size: 35px;"></i></a>
+				
+			</div><br>
+		
+		</div>
+		<div>
+
+						<form style="margin-top: 20px!important;background-color: #fff">
+								<div class="input-group">
+								  <span class="input-group-addon color-inputs"><i class="glyphicon glyphicon-envelope"></i></span>
+								  <input type="hidden" id="photoSrc">
+								  <input id="mailaddress"  type="text" class="form-control disabled-inputs" name="mail" disabled placeholder="">
+								</div>
+								<div class="input-group">
+										<span class="input-group-addon color-inputs"><i class="glyphicon glyphicon-user"></i></span>
+										<input id="username" type="text" class="form-control" name="Kullanıcı Adı"  placeholder="">
+								</div>
+								<div class="input-group">
+											<span class="input-group-addon color-inputs"><i class="glyphicon glyphicon-pencil"></i></span>
+											<input id="fullname" type="text" class="form-control" name="Ad Soyad"  placeholder="">
+								</div>
+								
+							<div class="input-group">
+									<span class="input-group-addon color-inputs"><i class="glyphicon glyphicon-phone"></i></span>
+									<input type="phone" id="phone" class="form-control" name="phone"  placeholder="GSM NO">
+						</div>
+						<div class="input-group">
+								<span class="input-group-addon color-inputs"><i class="glyphicon glyphicon-comment"></i></span>
+								<textarea id="bio" class="form-control" name="bio"  placeholder=""></textarea>
+					</div>
+
+
+					</form>
+		</div>
+		<div class="follow">
+			<div class="follow-grds">
+			<a id="kaydetButon"  class="button hvr-sweep-to-bottom "> <i class="glyphicon glyphicon-ok"></i> Kaydet</a>
+			
+	</div>
+
+	</div>	
+				
+		<!--//welcome-->
+		<!--/footer-->
+		<div style="margin-top:40px">
+			<div class="w3agile agileinfo_copy_right" style="position:fixed;bottom:50px;width:100%;height:50px">
+				<div class="agileinfo_copy_right_right" style="margin: -6px;">
+					<ul class="social">
+							<li><a href="anaSayfa.html"><i class="fa fa-home bottom-bar"></i></a></li>
+						<li><a href="profilim.html"><i class="fa fa-user bottom-bar"></i></a></li>
+						<li><a href="#"><i class="fa fa-arrow-up bottom-bar"></i></a></li>
+						<li><a href="destek.html"><i class="glyphicon glyphicon-wrench bottom-bar"></i></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+		</div>
+	</div>
+		<!--/footer-->
+	
+		<div class="app">
+				
+			<p class="event listening"></p>
+			<p class="event received"></p>
+		</div>
+	</div>
+	
+</div>
+<script src="cordova.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/index.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+		
+		var userID=window.localStorage.getItem('userID');
+
+$.get('http://www.buplaka.com/function.php?func=userDetail&id='+userID,function(dataUser){ 
+
+  var sonuc = dataUser.split("€");
+
+	 var donenID=sonuc[0];
+
+
+
+	  $('#username').val(sonuc[1]);
+	  $('#fullname').val(sonuc[2]);
+	  $('#mailaddress').val(sonuc[5]);
+	  $('#bio').val(sonuc[4]);
+	  $('#phone').val(sonuc[7]);
+	  
+	  
+
+				  var photo=sonuc[3];
+
+	   if(photo!=""){
+					$("#userPhoto").attr("src","http://www.buplaka.com/mobileUploads/"+sonuc[3]);
+					  
+				  }
+				  else{
+					$("#userPhoto").attr("src","img/user.png");
+					  
+				  }
+	  
+
+	//   $('#bio').append(sonuc[4]);
+	  
+
+});
+
+$('#kaydetButon').click(function(){
+
+	 var userID=window.localStorage.getItem('userID');
+	 var userName=$('#username').val();
+	 var fullName=$('#fullname').val();
+	 var phone=$('#phone').val();
+	 var bio=$('#bio').val();
+	 var userPhoto=$('#photoSrc').val();
+
+	 			var kullaniciBilgileri = '&userID='+userID+'&username='+userName+'&fullname='+fullName+'&phone='+phone+'&bio='+bio+'&photo='+userPhoto; 
+	 			
+	 			$.get('http://www.buplaka.com/function.php?func=updateUser'+kullaniciBilgileri,function(sonucUpdate){ 
+
+				if(sonucUpdate=='başarılı'){
+					sweetAlert({
+                        title: "Başarılı!", 
+                        text: "Güncelleme Tamamlandı ", 
+                        type: "error"
+                    });
+
+				}
+				else{
+					
+					sweetAlert({
+                        title: "Hata!", 
+                        text: sonucUpdate, 
+                        type: "error"
+                    });
+				}
+
+
+				});
+
+
+		});
+
+
+
+})
+
+
+
+</script>
+ <script type="text/javascript">
+
+	var userID=window.localStorage.getItem('userID');
+
+			function photoGetir(){
+
+
+
+			$.get('http://www.buplaka.com/function.php?func=photoGetir&userID='+userID,function(deger){ 
+
+			var sonuc = deger;
+
+
+				$("#userPhoto").attr("src",sonuc);
+				$("#photoSrc").val(sonuc);
+				
+});
+}
+
+	function getImage() {
+	navigator.camera.getPicture(uploadPhoto, function(message) {
+		sweetAlert({
+                        title: "İptal!", 
+                        text: "İşlem İptal Edildi ", 
+                        type: "error"
+                    });
+	}, {
+	quality: 60,
+	destinationType: navigator.camera.DestinationType.FILE_URI,
+	sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+	});
+   }
+   
+
+
+   function uploadPhoto(imageURI) {
+
+	var options = new FileUploadOptions();
+	options.fileKey = "file";
+	options.fileName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
+	options.mimeType = "image/jpeg";
+	console.log(options.fileName);
+	var params = new Object();
+	params.value1 = "test";
+	params.value2 = "param";
+	params.userID = window.localStorage.getItem('userID');
+	options.params = params;
+	options.chunkedMode = false;
+   
+   var ft = new FileTransfer();
+	ft.upload(imageURI, "http://www.buplaka.com/cordovaUpl.php",function(result){
+
+		
+		sweetAlert({
+                        title: "Tebrikler!", 
+                        text: "Yükleme Başarılı Oldu.", 
+                        type: "error"
+                    });
+
+		photoGetir();
+
+		//img güncellenecek;
+	console.log(JSON.stringify(result));
+	}, function(error){
+		sweetAlert({
+                        title: "Hata!", 
+                        text: "Bilinmeyen bir hata meydana geldi :/ ", 
+                        type: "error"
+                    });
+	console.log(JSON.stringify(error));
+	}, options);
+	}
+	</script>
+
+</body>
+</html>

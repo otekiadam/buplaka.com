@@ -1,0 +1,737 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>buplaka</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" type="text/css" charset="utf-8" />
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta charset utf="8">
+<!--font-awsome-css-->
+     <link rel="stylesheet" href="css/font-awesome.min.css"> 
+<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<!--component-css-->
+	<!-- <script src="js/jquery-2.1.4.min.js"></script> -->
+	<script src="css/index.css"></script>
+	
+    <script src="js/bootstrap.min.js"></script>
+<!--script-->
+	<script src="js/modernizr.custom.js"></script>
+    <script src="js/bigSlide.js"></script>
+           <script>
+				$(document).ready(function() {
+				$('.menu-link').bigSlide();
+				});
+	 </script>
+	 
+
+	 <style>
+body {
+    margin: 0;
+    padding: 0;
+    background:#eee;
+    font-family: roboto;
+    display:flex; /* You delete it on your web page */
+    justify-content:center;/* and this - delete */
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #eee;
+}
+.login-card {
+    min-height: 100vh;
+    background-image: url('images/launch.png');
+    background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -wenkit-background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+    z-index: 2;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: roboto!important;
+}
+.login-card:after {
+
+	background: linear-gradient(-135deg, rgb(110, 111, 117), rgb(0, 0, 0));
+ background: -webkit-linear-gradient(-135deg, rgb(110, 111, 117), rgb(0, 0, 0));
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    opacity: 0.5;
+    z-index: 3;
+}
+.login-card > form {
+    z-index: 4;
+    position: relative;
+    padding: 0px 25px;
+    width: 100%;
+}
+.logo-kapsul {
+    text-align: center;
+    position: relative;
+    opacity: 0.8;
+}
+.logo {
+    height: auto;
+    padding: 50px 0px;
+}
+/* form başlangıç stiller ------------------------------- */
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+.group input {
+    font-size: 18px;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: none;
+    color: #eee;
+}
+.group input:focus {
+    outline: none;
+}
+/* LABEL ======================================= */
+
+.group label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 5px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+/* active durum */
+
+.group input:focus ~ label,
+input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+/* BOTTOM BARS ================================= */
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+    left: 50%;
+}
+.bar:after {
+    right: 50%;
+}
+/* active durum bar */
+
+.group input:focus ~ .bar:before,
+.group input:focus ~ .bar:after {
+    width: 50%;
+}
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+    position: absolute;
+    height: 0%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+/* active durum */
+
+.group input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+/* form animasyon ================ */
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: rgba(255, 255, 255, 0.7);
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+@-moz-keyframes inputHighlighter {
+    from {
+        background: rgba(255, 255, 255, 0.7);
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+@keyframes inputHighlighter {
+    from {
+        background: rgba(255, 255, 255, 0.7);
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+.input-ikon {
+    font-size: 25px!important;
+    position: relative;
+}
+.input-sifre-ikon {
+    font-size: 22px!important;
+    position: relative;
+}
+.span-input {
+    margin-left: 10px;
+    position: relative;
+    top: -5px;
+}
+.giris-yap-buton,
+.kayit-ol-buton,
+.sifre-hatirlat-buton {
+    background: linear-gradient(-135deg, rgb(63, 81, 181), rgb(233, 30, 99));
+    background: -webkit-linear-gradient(-135deg, rgb(63, 81, 181), rgb(233, 30, 99));
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #eee;
+    font-family: roboto;
+    font-weight: 100;
+    padding: 10px;
+    border-radius: 3px;
+    outline: none;
+    opacity: 0.8;
+	width:100%!important;	
+}
+.forgot-and-create {
+    margin: 20px 0px;
+}
+.forgot-and-create a {
+    color: #bbb;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 100;
+    margin-right: 10px;
+}
+/* Geçiş Links Forgot and Create */
+
+.zaten-hesap-var-link {
+    color: #bbb;
+    font-size: 14px;
+    padding: 20px 0px;
+    text-decoration: none;
+    display: block;
+}
+	 </style>
+<!-- web-fonts -->  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- //web-fonts -->
+<!-- pop-up-box -->
+
+
+		<!-- <script type="text/javascript">
+		function init() {
+    document.addEventListener("deviceready", deviceReady, true);
+    delete init;
+}
+
+function deviceReady() {
+ 
+    $("#loginForm").on("submit",function(e) {
+		//istek geri dönene kadar butona basılmasını engelliyoruz.
+        $("#submitButton",this).attr("disabled","disabled");
+        var u = $("#username", this).val();
+        var p = $("#password", this).val();
+        if(u != '' && p!= '') {
+            $.post("https://www.buplaka.com/loginTest.php?method=login&returnformat=json", {username:u,password:p}, function(res) {
+                if(res == true) {
+					window.localStorage["username"] = u;
+               	    window.localStorage["password"] = p;  
+                    $.mobile.changePage("anaSayfa.html");
+                } else {
+                    navigator.notification.alert("Giriş Başarısız :/", function() {});
+                }
+                $("#submitButton").removeAttr("disabled");
+            },"json");
+        }
+        return false;
+    });
+
+}
+
+		
+		
+		</script> -->
+<script type="text/javascript">
+
+$("#login").click(function(){
+    
+    alert('tıklandı');
+    
+// var email=$("#email").val();
+// var password=$("#password").val();
+// var dataString="email="+email+"&password="+password+"&login=";
+// if($.trim(email).length>0 & $.trim(password).length>0)
+// {
+// $.ajax({
+// type: "POST",
+// url: "http://www.buplaka.com/loginTest.php",
+// data: dataString,
+// crossDomain: true,
+// cache: false,
+// beforeSend: function(){ $("#login").html('Giriş Yapılıyor...');},
+// success: function(data){
+// if(data=="success")
+// {
+//     alert('geri döndü');
+    
+// localStorage.login="true";
+// localStorage.email=email;
+// window.location.href = "anaSayfa.html";
+// }
+// else if(data="failed")
+// {
+// alert("Giriş Başarısız :/ ");
+// $("#login").html('Login');
+// }
+// }
+// });
+// }return false;
+});
+
+</script>
+		
+
+
+
+			<!-- Dışarıdan Çağırılan Dosyalar Font we Materyal İkonlar -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- #Dışarıdan Çağırılan Dosyalar Font we Materyal İkonlar Bitiş -->
+
+<!--//pop-up-box -->
+    </head>
+
+
+<body id="bodyy" style="background-color: #000!important;">
+	
+
+		<!-- Kapsayıcı -->
+		<div class="col-lg-4 col-md-7 col-sm-6 col-xs-12     login-card" style="    height: 680px;">
+		
+			<!-- Login (giriş) Form Sayfası -->
+			<form id="loginForm" class="col-lg-12">
+		
+				<!-- Logo -->
+				<div class="col-lg-12 logo-kapsul">
+					<img width="100" class="logo" src="https://selimdoyranli.com/cdn/material-form/img/logo.png" style="visibility:hidden" alt="Logo" />
+				</div>
+				<!-- #Logo Bitiş -->
+		
+				<div style="clear:both;"></div>
+		
+				<!-- Kullanıcı Adı Giriş İnput -->
+				<div class="group">
+					<input type="text" name="username" id="username" value=""    required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label><i class="material-icons input-ikon"></i><span class="span-input">E-mail Adresiniz</span></label>
+				</div>
+				<!-- #Kullanıcı Adı Giriş İnput Bitiş -->
+		
+				<!-- Şifre İnput Giriş-->
+				<div class="group">
+					<input type="password" name="password" id="password" value=""  required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label><i class="material-icons input-sifre-ikon"></i><span class="span-input">Şifre</span></label>
+				</div>
+				<!-- Şifre İnput Giriş Bitiş-->
+		
+				<!-- Giriş Yap Buton -->
+				<i class="kayit-ol-buton" id="login-ol">Giriş Yap</i>
+                
+				<!-- <input type="submit" value="Giriş" class="giris-yap-buton">Giriş Yap</a> -->
+				
+				<!-- #Giriş Yap Buton Bitiş -->
+		
+				<!-- Şifremi Unuttum ve Kaydol Linkleri -->
+				<div class="forgot-and-create tab-menu">
+					<a class="sifre-hatirlat-link" href="javascript:void('sifre-hatirlat-link');">Şifreni mi Unuttun ?</a>
+					<a class="hesap-olustur-link" href="javascript:void('hesap-olustur-link');">Hesap Oluştur.</a>
+				</div>
+				<!-- Şifremi Unuttum ve Kaydol Linkleri Bitiş -->
+		
+			</form>
+			<!-- #Login (giriş) Form Sayfası Bitiş -->
+		
+			<!-- Kayıt Form Sayfası -->
+			<form id="kayit-form" class="col-lg-12">
+		
+				<div class="col-lg-12 logo-kapsul">
+					<img width="100" class="logo" src="https://selimdoyranli.com/cdn/material-form/img/logo.png" style="visibility:hidden"  alt="Logo" />
+				</div>
+		
+				<div style="clear:both;"></div>
+		
+				<!-- Kayıt Form Kullanıcı Adı İnput -->
+				<div class="group">
+					<input type="text" name="username_kayit" id="username_kayit" value=""  required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label><i class="material-icons input-ikon"></i><span class="span-input">Kullanıcı Adınız</span></label>
+				</div>
+				<!-- #Kayıt Form Kullanıcı Adı İnput Bitiş -->
+		
+				<!-- Kayıt Form Email İnput -->
+				<div class="group">
+					<input type="mail" name="email_kayit" id="email_kayit" value=""  required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label><i class="material-icons input-ikon"></i><span class="span-input"> E-Mail</span></label>
+				</div>
+				<!-- #Kayıt Form Email İnput Bitiş -->
+		
+				<!-- Kayıt Form Şifre İnput -->
+				<div class="group">
+					<input type="password" name="password" id="password_kayit" value=""  required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label><i class="material-icons input-sifre-ikon"></i><span class="span-input">Şifre</span></label>
+				</div>
+				<!-- #Kayıt Form Şifre İnput Bitiş -->
+		
+				<!-- Kayıt Form Şifre-Tekrarı İnput -->
+				<div class="group">
+					<input type="password" name="password_kayit_tekrar" id="password_kayit_tekrar" value=""  required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+                    <label><i class="material-icons input-sifre-ikon"></i><span class="span-input">Şifre Tekrarı</span></label>
+               <span style="color:#bebebe" >Kayıt Olduğunuzuda <a href="_kullaniciSozlesmesi.html">Kullanıcı Sözleşmemizi</a> Kabul Etmiş Olursunuz.</span>
+                    
+				</div>
+				<!-- #Kayıt Form Şifre-Tekrarı İnput Bitiş -->
+				<!-- Kayıt Ol Buton -->
+				<i class="kayit-ol-buton" id="register">Kayıt Ol</i>
+				<!-- #Kayıt Ol Buton Bitiş -->
+		
+				<!-- Zaten Hesap Var Link -->
+				<a class="zaten-hesap-var-link" href="javascript:void('zaten-hesap-var-link');">Zaten Bir Hesabınız Var mı? Giriş Yapın.</a>
+				<!--# Zaten Hesap Var Link Bitiş -->
+		
+			</form>
+			<!-- ##Kayıt Form  Sayfası Bitis -->
+		
+			<!-- Sifre Hatirlat Form Sayfası -->
+			<form id="sifre-hatirlat-form" class="col-lg-12">
+		
+				<div class="col-lg-12 logo-kapsul">
+					<img width="100" class="logo" src="https://selimdoyranli.com/cdn/material-form/img/logo.png" style="visibility:hidden"  alt="Logo" />
+				</div>
+		
+				<div style="clear:both;"></div>
+		
+				<!-- Şifre Hatırlat Email İnput -->
+				<div class="group">
+					<input type="text" required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label><i class="material-icons input-ikon"></i><span class="span-input">E-Mail</span></label>
+				</div>
+				<!-- #Şifre Hatırlat Email İnput Bitiş -->
+		
+				<!-- Şifremi Hatırlat Buton -->
+				<i class="sifre-hatirlat-buton">Şifremi Hatırlat</i>
+				<!-- #Şifremi Hatırlat Buton Bitiş -->
+		
+				<!-- Zaten Hesap Var Link -->
+				<a class="zaten-hesap-var-link" href="javascript:void('zaten-hesap-var-link');">Zaten Bir Hesabınız var mı? Giriş Yapın.</a>
+				<!-- #Zaten Hesap Var Link Bitiş -->
+		
+			</form>
+			<!-- ##Sifre Hatirlat Form Bitis -->
+		
+		</div>
+		<!-- #Kapsayıcı Bitiş -->
+<script src="js/index.js"></script>
+<script src="cordova.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script type="text/javascript">
+
+    </script> 
+
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+        $('.popup-top-anim').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 100,
+            mainClass: 'my-mfp-zoom-in'
+        });		
+        $("#kayit-form").hide();
+        $("#sifre-hatirlat-form").hide();	
+        $(".hesap-olustur-link").click(function(e){
+        $("#loginForm").slideUp(0);	
+        $("#kayit-form").fadeIn(100);	
+        });
+        
+        $(".zaten-hesap-var-link").click(function(e){
+        $("#kayit-form").slideUp(0);
+        $("#sifre-hatirlat-form").slideUp(0);	
+        $("#loginForm").fadeIn(100);	
+        });
+
+        $('.submitButton').click(function(){
+
+            //window.location.href="anaSayfa.html";
+
+        });
+
+        
+        $(".sifre-hatirlat-link").click(function(e){
+        $("#loginForm").slideUp(0);	
+        $("#sifre-hatirlat-form").fadeIn(200);																						
+    }); 
+
+        
+
+        });
+</script>
+
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+
+        
+
+
+                $(function() {
+			  
+					
+              bosKullanici ({
+                        
+                        title : "Hata !",
+                        text  : "Girmiş Olduğunuz Kullanıcı Adı daha önce Tanımlanmıştır",
+                        allowEscapeKey : "true", // false değeri alırsa esc kapatmaz
+                        customClass : ".sınıf", // <button class="sınıf"> gibi :)
+                        allowOutsideClick : "false", // true yaparsak nereye tıklarsak uyarı kapanır
+                        showCancelButton : "false", // true yaparsak cancel butonu görünür
+                        showConfirmButton : "true", // Ok butonunu gösterir false yaparsanız görünmez
+                        confirmButtonText :"Tamam", // ok butonunun yerine istediğnizi yazarsınız
+                        confirmButtonColor : "#AEDEF4", // Ok butonunu rengini değiştirebilirsiniz
+                        cancelButtonText : "Geri Git",  // Cancel Butonun yerine istediğimizi yazabiliriz.
+                        closeOnConfirm :"true",// Okeye basıldıysa burayı göster şurayı göster gibi 
+                        closeOnCancel :"true", // cancele basılırsa şurayı göster gibi(if else gibi)
+                        imageUrl :"https://a2-images.myspacecdn.com/images03/21/026f6a3d1a084b95bcda8e277a7cb743/300x300.jpg", // pencere resmini değiştirir
+                        imageSize :"100x100", // resmin boyutunu ayarlar
+                        timer: "10000", // 4 saniyede uyarı penceresini kapatır
+                        html : "true"
+                // diğer ayarları bu şekilde test ederek öğrenebilirsiniz. Bu işler kurcalamadan olmaz : )
+                
+                   });
+  
+    })
+
+           
+            $("#login-ol").click(function () {
+                
+
+             var email=$('#username').val();
+             var password=$('#password').val();
+
+             if(email==''&&password==''){
+                sweetAlert({
+                        title: "Hata!", 
+                        text: "Oturum bilgileri boş geçilemez :/", 
+                        type: "error"
+                    });
+                 return;
+                }
+                 
+             
+             var kullaniciBilgileri = 'email='+email+'&password='+password; 
+             $.get('http://www.buplaka.com/function.php?func=login&'+kullaniciBilgileri,function(data7){ 
+                
+                //   var sonuc = data7.split(",");
+                  var sonuc = data7;
+                
+                  if(sonuc!="basarisiz")
+                        {
+
+                            localStorage.setItem('userID',sonuc);
+                             window.location.href="anaSayfa.html";
+                        }
+                        else{
+
+                     sweetAlert({
+                        title: "Hata!", 
+                        text: "Giriş Başarısız, Lütfen oturum bilgileriniz kontrol ederek yeniden deneyiniz", 
+                        type: "error"
+                    });
+                        }
+
+
+                  
+
+              });   
+        })
+          
+});
+
+
+
+</script>
+
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+           
+            $("#register").click(function () {
+            
+             var username_kayit=$('#username_kayit').val();
+             var password_kayit=$('#password_kayit').val();
+             var email_kayit=$('#email_kayit').val();
+             var passwordLoop=$('#password_kayit_tekrar').val();
+
+             if(password_kayit<6){
+                sweetAlert({
+                        title: "Hata!", 
+                        text: "Şifreniz en az 6 karakterden oluşmalıdır", 
+                        type: "error"
+                    });
+
+                 return;
+             }
+             
+
+             if(password_kayit==passwordLoop){
+                var kullaniciBilgileri = 'username='+username_kayit+'&password='+password_kayit+'&email='+email_kayit; 
+             $.get('http://www.buplaka.com/function.php?func=register&'+kullaniciBilgileri,function(dataRegister){ 
+                
+                //   var sonuc = data7.split(",");
+                  var sonuc = dataRegister;
+                
+                  if(sonuc!="basarisizMail"||sonuc!="basarisizUsername")
+                 
+                        {
+                            sweetAlert({
+                        title: "Tebrikler!", 
+                        text: "Üyeliğiniz Aktifleştirilmiştir, iyi eğlenceler :)", 
+                        type: "error"
+                    });
+                            localStorage.setItem('userID',sonuc);
+                             window.location.href="anaSayfa.html";
+                        }
+                        else if(sonuc=="basarisizMail"){
+
+                                            sweetAlert({
+                        title: "Hata!", 
+                        text: "Bu mail adresi daha önce kullanılmış, lütfen farklı bir adres ile yeniden deneyin", 
+                        type: "error"
+                    });
+
+                        }
+                        else if(sonuc=="basarisizUsername"){
+                            sweetAlert({
+                        title: "Hata!", 
+                        text: "Bu Kullanıcı adı daha önce kullanılmış, lütfen farklı bir adres ile yeniden deneyin", 
+                        type: "error"
+                    });
+                        }
+                       
+
+              });   
+
+             }
+
+             else{
+                 sweetAlert({
+                        title: "Hata!", 
+                        text: "Girdiğiniz Şifreler Eşleşmiyor :/", 
+                        type: "error"
+                    });
+             }
+             
+             
+
+                
+        })
+          
+});
+
+
+
+</script>
+            
+
+</body>
+</html>

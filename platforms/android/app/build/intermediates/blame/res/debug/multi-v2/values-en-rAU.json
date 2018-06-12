@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/otekiadam/Desktop/buplakaGit-master-bozuk/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
+            "map": [
+                {
+                    "source": "/Users/otekiadam/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3e30c4caff664e173da65c258be9ba43/res/values-en-rAU/values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,327 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<title>buplaka.com Mobile App</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta charset utf="8">
+<!--font-awsome-css-->
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="css/style2.css" rel="stylesheet" type="text/css"/>
+	
+<!--component-css-->
+
+<style>
+	body, html{     
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+</style>
+
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+
+
+
+	<script src="js/bootstrap.min.js"></script>
+		<script src="css/index.css"></script>
+
+<!--script-->
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/bigSlide.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+<script src="js/admob_simple.js"></script>
+<script src="js/AdMob.js"></script>
+           <script>
+				$(document).ready(function() {
+				$('.menu-link').bigSlide();
+				});
+     </script>
+<!-- web-fonts -->
+<link href="https://fonts.googleapis.com/css?family=Asap|Quicksand" rel="stylesheet">
+<!-- //web-fonts -->
+<!-- pop-up-box -->
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	    <script>
+			$(document).ready(function() {
+				$('.popup-top-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+				});
+			});
+		</script>
+<!--//pop-up-box -->
+    </head>
+<body>
+<div class="body-back">
+	<div class="masthead pdng-stn1">
+		<div id="menu" class="panel" role="navigation">
+			<div class="wrap-content" style="margin: 0 35px;">
+				<div class="profile-menu">
+						<img  src="images/logo-01.png" alt=" ">
+
+
+						<div class="pro-menu" >
+							<div class="logo">
+									<li><a class=" link link--yaku  " href="anaSayfa.html" > <i class="glyphicon glyphicon-home"></i> Ana Sayfa</a></li>
+									<li><a class=" link link--yaku  " href="gambaz.html" > <i class="glyphicon glyphicon-eye-close"></i> Gambazlananlar</a></li>
+									<li><a class=" link link--yaku  " href="destek.html" ><i class="glyphicon glyphicon-wrench"></i> Destek</a></li>
+									<li><a class=" link link--yaku  " href="kullanimKosullari.html" ><i class="fa fa-eye"></i> Kullanım Koşulları</a></li>
+									
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" id="sayfadeger" name="" >
+		<div class="phone-box wrap push" id="home">
+			<div class="menu-notify" style="    position: fixed;
+			width: 100%;
+			z-index: 1000;" >
+				<div class="profile-left">
+					<a href="#menu" class="menu-link"><i class="fa fa-list-ul"></i></a>
+				</div>
+				<div class="Profile-mid">
+					<h5 class="pro-link"><img src="images/logo-01.png" style="width:90px;height:26px" alt=""></h5>
+				</div>
+				<div class="Profile-right">
+
+					<a href="profilim.html"  class="profilim sign-in"> <i class="fa fa-user"></i></a>
+
+				</div>
+				<div class="clearfix"></div>
+	</div>
+
+   <div class="container" id="contents" >
+	   <script type="text/javascript">
+
+
+
+	     $(document).ready(function() {
+
+getcontents(0);
+
+$('#sayfadeger').val(0);
+
+
+$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+       $(window).unbind('scroll');
+
+	   var sayfadeger=$('#sayfadeger').val();
+
+	   var yenideger=sayfadeger+5;
+
+	   $('#sayfadeger').val(yenideger);
+
+
+	   getcontents(yenideger);
+
+   }
+});
+
+
+
+
+})
+
+function getcontents(sayfa){
+
+ $.get('http://www.buplaka.com/function.php?func=pullAsk&sayfa='+sayfa,function(posts){
+
+	//   var sonuc = data7.split(",");
+	  var sonuc = posts;
+
+				$('#contents').html(sonuc);
+  });
+}
+
+
+
+
+	   </script>
+
+
+<script type="text/javascript" >
+	$(document).ready(function(){
+	
+
+	 $(document).on('click', '.dislikePost', function(e) {
+	 
+	 var postDislikeID=$(this).data('id');
+
+$.get('http://www.buplaka.com/function.php?func=postDislike&postDislikeID='+postDislikeID,function(dislikePost){
+
+	
+	$(".disLikePost").appendTo(dislikePost);
+
+});
+	
+	 
+	 });
+	})
+	 
+
+</script>
+<script type="text/javascript" >
+	$(document).ready(function(){
+
+	  $(document).on('click', '.likePost', function(e) { 
+	  var postLikeID=$(this).data('id');
+
+
+				$.get('http://www.buplaka.com/function.php?func=postLike&postLikeID='+postLikeID,function(likePost){
+
+				$(".likePost").append(likePost);
+
+});
+	   });
+		})
+	   
+</script>
+
+
+
+
+<script type="text/javascript" >
+	$(document).ready(function(){
+
+	   $(document).on('click', '.userName', function(e) {  
+	   var userID=$(this).data('id');
+
+            localStorage.setItem('profilID',userID);
+			window.location.href='digerProfil.html';
+	   
+	   });
+
+		})
+
+</script>
+<script type="text/javascript" >
+
+	$(document).ready(function(){
+
+	
+
+	    $(document).on('click', '.gonderiDetay', function(e) { 
+		
+		var gonderiID=$(this).data('id');
+
+		localStorage.setItem('gonderiID',gonderiID);
+		window.location.href='gonderiDetay.html';
+		
+		 });
+		})
+
+</script>
+						<div class="app">
+							<p class="event listening"></p>
+							<p class="event received"></p>
+						</div>
+					</div>
+			</div>
+		  
+ <ul>
+  <li>
+	<button id="btn" style="border:none!important;position: fixed; bottom:50px;background:#3379b7!important; right: 5px;border-radius:50%"> <i style="color:#fff!important;padding: 5px;" class="fa fa-3x fa fa-plus" ></i> </button>
+ </li>
+
+
+									<script type="text/javascript" src="cordova.js"></script>
+
+									<script>
+											let app = {
+												init: function(){
+													document.getElementById('btn').addEventListener('click', app.takephoto);
+												},
+												takephoto: function(){
+													let opts = {
+														quality: 80,
+														destinationType: Camera.DestinationType.FILE_URI,
+														sourceType: Camera.PictureSourceType.CAMERA,
+														mediaType: Camera.MediaType.PICTURE,
+														encodingType: Camera.EncodingType.JPEG,
+														cameraDirection: Camera.Direction.BACK,
+														targetWidth: 400,
+														targetHeight: 600
+													};
+													
+													navigator.camera.getPicture(app.ftw, app.wtf, opts);
+												},
+												ftw: function(imgURI){
+													window.localStorage.setItem("photoPath",imgURI);
+													window.location.href="gonderiOlustur.html";
+
+													
+												},
+												wtf: function(msg){
+												}
+											};
+											
+											document.addEventListener('deviceready', app.init);
+										</script>
+						</ul>
+		<!--//welcome-->
+		<!--/footer-->
+		<div style="margin-top:40px">
+			<div class="w3agile agileinfo_copy_right" style="position:fixed;bottom:50px;width:100%;height:50px">
+				<div class="agileinfo_copy_right_right" style="margin: -6px;">
+					<ul class="social">
+							<li><a href="anaSayfa.html"><i class="fa fa-home bottom-bar"></i></a></li>
+						<li><a href="profilim.html"><i class="fa fa-user bottom-bar"></i></a></li>
+						<li><a href="#"><i class="fa fa-arrow-up bottom-bar"></i></a></li>
+						<li><a href="destek.html"><i class="glyphicon glyphicon-wrench bottom-bar"></i></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+		</div>
+	</div>
+		<!--/footer-->
+
+					<!--/footer-->
+<div style="z-index:-1000">
+	<div class="w3agile agileinfo_copy_right" style="position:fixed;bottom:0px;width:100%;height:50px;background-color:#000">
+		<div class="agileinfo_copy_right_right" style="margin: -6px;">
+			
+		</div>
+		<div class="clearfix"> </div>
+</div>
+</div>
+<!--/footer-->
+
+</div>
+</div>
+<script src="cordova.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/index.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+</body>
+</html>
+

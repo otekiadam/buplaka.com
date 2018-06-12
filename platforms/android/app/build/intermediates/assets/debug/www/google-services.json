@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "831071257339",
+    "firebase_url": "https://buplaka-f9800.firebaseio.com",
+    "project_id": "buplaka-f9800",
+    "storage_bucket": "buplaka-f9800.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831071257339:android:b3d57500616dd1f0",
+        "android_client_info": {
+          "package_name": "com.buplaka.buplaka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831071257339-j6fl5e6mbt6h4056ed7dkc6g8m5687q4.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "831071257339-j6fl5e6mbt6h4056ed7dkc6g8m5687q4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNwirp_yTr7zqakvBP0zC9DaujfEMSGOc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

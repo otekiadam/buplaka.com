@@ -1,0 +1,10 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "buplaka",
+  "short_name": "buplaka",
+  "version": "com.maxithings.buplakaNew",
+  "author": "MaxiThings Development Team",
+  "icons": [],
+  "start_url": "index.html"
+}

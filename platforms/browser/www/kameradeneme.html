@@ -1,0 +1,209 @@
+
+
+
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<title>buplaka.com Mobile App</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta charset utf="8">
+<!--font-awsome-css-->
+     <link rel="stylesheet" href="css/font-awesome.min.css"> 
+<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<!--component-css-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+		<script src="css/index.css"></script>
+	
+<!--script-->
+	<script src="js/modernizr.custom.js"></script>
+    <script src="js/bigSlide.js"></script>
+           <script>
+				$(document).ready(function() {
+				$('.menu-link').bigSlide();
+				});
+     </script>
+<!-- web-fonts -->  
+<link href="https://fonts.googleapis.com/css?family=Asap|Quicksand" rel="stylesheet">
+<!-- //web-fonts -->
+<!-- pop-up-box -->
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	    <script>
+			$(document).ready(function() {
+				$('.popup-top-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+				});																							
+			}); 
+		</script>
+<!--//pop-up-box -->
+    </head>
+<body>
+<div class="body-back">
+	<div class="masthead pdng-stn1">
+		<div id="menu" class="panel" role="navigation">
+			<div class="wrap-content" style="margin: 0 35px;">
+				<div class="profile-menu">
+						<img  src="images/logo-01.png" alt=" ">
+
+
+						<div class="pro-menu" >
+							<div class="logo">
+									<li><a class=" link link--yaku active"  href="profilim.html" > <i class="glyphicon glyphicon-home"></i> Profilim</a></li>
+									<li><a class=" link link--yaku  " href="gonderiler.html"> <i class="glyphicon glyphicon-road"></i> Gönderiler</a></li>
+									<li><a class=" link link--yaku  " href="gambazlananlar.html" > <i class="glyphicon glyphicon-eye-close"></i> Gambazlananlar</a></li>
+									<li><a class=" link link--yaku  " href="ilaniAsklar.html"> <i class="glyphicon glyphicon-heart"></i> İlanı Aşklar</a></li>
+									<li><a class=" link link--yaku  " href="destek.html" ><i class="glyphicon glyphicon-wrench"></i> Destek</a></li>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" id="sayfadeger" name="" >
+		<div class="phone-box wrap push" id="home">
+			<div class="menu-notify" style="    position: fixed;
+			width: 100%;
+			z-index: 1000;" >
+				<div class="profile-left">
+					<a href="#menu" class="menu-link"><i class="fa fa-list-ul"></i></a>
+				</div>
+				<div class="Profile-mid">
+					<h5 class="pro-link"><img src="images/logo-01.png" style="width:90px;height:26px" alt=""></h5>
+				</div>
+				<div class="Profile-right">
+
+					<a href="profilim.html" class="sign-in"> <i class="fa fa-user"></i></a> 
+					
+				</div>
+				<div class="clearfix"></div>
+	</div> 
+
+   <div class="container" id="contents" >
+
+	<button onclick="captureImage();">Capture Image</button> <br>
+
+   </div>
+
+				
+									
+									<script type="text/javascript" src="cordova.js"></script>
+
+									<div class="page">
+											<p><img src="img/logo.png" alt="image" id="photo" /></p>
+											<p><button id="btn">Take Picture</button></p>
+											<p id="msg"></p>
+										</div>
+										<script type="text/javascript" src="cordova.js"></script>
+										<script>
+											function captureSuccess(mediaFiles) {
+        var i, len;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            uploadFile(mediaFiles[i]);
+        }       
+    }
+
+    // Called if something bad happens.
+    // 
+    function captureError(error) {
+        var msg = 'An error occurred during capture: ' + error.code;
+        navigator.notification.alert(msg, null, 'Uh oh!');
+    }
+
+    // A button will call this function
+    //
+    function captureImage() {
+        // Launch device camera application, 
+        // allowing user to capture up to 2 images
+        navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 2});
+    }
+
+    // Upload files to server
+    function uploadFile(mediaFile) {
+        var ft = new FileTransfer(),
+            path = mediaFile.fullPath,
+            name = mediaFile.name;
+
+        ft.upload(path,
+            "http://my.domain.com/upload.php",
+            function(result) {
+                console.log('Upload success: ' + result.responseCode);
+                console.log(result.bytesSent + ' bytes sent');
+            },
+            function(error) {
+                console.log('Error uploading file ' + path + ': ' + error.code);
+            },
+            { fileName: name });   
+    }
+
+    </script>
+										</script>
+									<!-- <script>
+
+									$('#btn').click(function(){
+
+										window.location.href="gonderiOlustur.html";
+
+									})
+									</script> -->
+						</ul>
+		<!--//welcome-->
+		<!--/footer-->
+<div style="margin-top:40px">
+		<div class="w3agile agileinfo_copy_right" style="position:fixed;bottom:0px;width:100%;height:50px">
+			<div class="agileinfo_copy_right_right" style="margin: -6px;">
+				<ul class="social">
+						<li><a href="anaSayfa.html"><i class="fa fa-home bottom-bar"></i></a></li>
+					<li><a href="profilim.html"><i class="fa fa-user bottom-bar"></i></a></li>
+					<li><a href="#"><i class="fa fa-search bottom-bar"></i></a></li>
+					<li><a href="#"><i class="fa fa-location-arrow bottom-bar"></i></a></li>
+
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
+	<!--/footer-->
+	
+</div>
+</div>
+<script src="cordova.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/index.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+<div class='gonderi-alani'>
+
+
+
+       
+
+  </div>
+	
+</body>
+</html>
+
+
+

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.maxithings.buplakaNew" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+    <feature name="AdMob">
+        <param name="android-package" value="com.cupertino.cordova.plugin.AdMob" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>buplaka</name>
+    <description>
+    </description>
+    <author email="alifaruk@maxithings.com" href="http://maxithings.com">
+        MaxiThings Development Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <splash height="300" platform="android" src="res/screen/android/screen.png" width="620" />
+    <icon density="mdpi" height="57" platform="android" src="res/icon/icon.png" width="57" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="orientation" value="portrait" />
+</widget>
